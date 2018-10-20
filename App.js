@@ -1,12 +1,25 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import HomeScreen from './screens/HomeScreen.js';
+import FailureScreen from './screens/FailureScreen.js';
+import EnterWifiScreen from './screens/EnterWifiScreen.js';
+import ProgramTagScreen from './screens/ProgramTagScreen.js';
+
+import { createStackNavigator } from 'react-navigation';
+
+const AppNavigator = createStackNavigator({
+  Home: HomeScreen,
+  Fail: FailureScreen,
+  Wifi: EnterWifiScreen,
+  Program: ProgramTagScreen
+}, {
+  initialRouteName: 'Home'
+});
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <AppNavigator />
     );
   }
 }

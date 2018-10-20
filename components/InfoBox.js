@@ -5,7 +5,7 @@ export default class InfoBox extends React.Component {
   render() {
     return (
       <View>
-        <Text>This is the stuff inside the info box.</Text>
+        <Text>{this.props.content}</Text>
       </View>
     );
   }

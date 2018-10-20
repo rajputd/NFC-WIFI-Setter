@@ -4,10 +4,11 @@ import InfoBox from '../components/InfoBox.js';
 
 export default class FailureScreen extends React.Component {
   render() {
+    const { params } = this.props.navigation.state;
+    const failMessage = params.failMessage
     return (
       <View>
-        <Text>This is the Failure Screen</Text>
-        <InfoBox />
+        <InfoBox content={failMessage} />
       </View>
     );
   }
