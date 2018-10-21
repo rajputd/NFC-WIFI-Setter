@@ -8,7 +8,8 @@ export default class EnterWifiScreen extends React.Component {
         <div style={styles.box}>
           <p style={styles.textDisplay}>Enter your WIFI credentials:</p>
           <Form />
-          <button style={styles.button}>Submit
+          <button style={styles.button} onClick={this.props.onClick}>
+            Submit
           </button>
         </div>
       </div>

@@ -7,6 +7,7 @@ export default class HomeScreen extends React.Component {
       <div style={styles.container}>
         <div style={styles.box}>
           <p style ={styles.textDisplay}>IS NFC ON? </p>
+          <button onClick={this.props.onClick}>Next</button>
         </div>
       </div>
     )

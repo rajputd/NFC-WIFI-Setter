@@ -22,9 +22,9 @@ import './../css/app.css';
 
     return (
       <div>
-        {currentScreen === "Home" ? <HomeScreen /> :
+        {currentScreen === "Home" ? <HomeScreen onClick={() => {this.setState({currentScreen: 'Wifi'})}} /> :
          currentScreen === "Fail" ? <FailureScreen {...params} /> :
-         currentScreen === "Wifi" ? <EnterWifiScreen {...params} /> :
+         currentScreen === "Wifi" ? <EnterWifiScreen {...params} onClick={() => {this.setState({currentScreen: 'Prog'})}}/> :
          currentScreen === "Prog" ? <ProgramTagScreen {...params} /> : null}
       </div>
     );
