@@ -1,21 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import InfoBox from '../components/InfoBox.js';
 
 export default class FailureScreen extends React.Component {
   render() {
-    const { params } = this.props.navigation.state;
-    const failMessage = params.failMessage
+    const failMessage = this.props.failMessage
     return (
-      <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style ={styles.textDisplay}>{failMessage} </Text>
-      </View>
-      </View>
+      <div style={styles.container}>
+        <div style={styles.box}>
+          <p style ={styles.textDisplay}>{failMessage} </p>
+        </div>
+      </div>
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = {
   container: {
     backgroundColor: '#e36947',
     height: '100%'
@@ -41,4 +39,4 @@ const styles = StyleSheet.create({
     marginTop: 80,
     borderStyle: 'solid'
   },
-})
+};

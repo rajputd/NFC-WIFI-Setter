@@ -1,17 +1,37 @@
 {
-  "name": "empty-project-template",
-  "main": "node_modules/expo/AppEntry.js",
-  "private": true,
+  "name": "nfc-wifi-setter",
+  "version": "1.0.0",
+  "description": "A app that writes wifi credentials to NFC tags",
+  "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "eject": "expo eject"
+    "start": "webpack-dev-server --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajputd/React-Calculator.git"
+  },
+  "author": "Dileep Rajput",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajputd/React-Calculator/issues"
+  },
+  "homepage": "https://github.com/rajputd/React-Calculator#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "image-webpack-loader": "^4.4.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
-    "expo": "^30.0.1",
-    "react": "^16.3.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "react-navigation": "^2.18.0"
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }

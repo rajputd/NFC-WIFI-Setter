@@ -1,35 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import InfoBox from '../components/InfoBox.js';
 
 export default class ProgramTagScreen extends React.Component {
   render() {
     return (
-      <View style = {styles.container}>
-      <View style={styles.box}>
-      <Text style ={styles.textDisplay}>Place phone on the NFC tag</Text>
+      <div style = {styles.container}>
+      <div style={styles.box}>
+      <p style ={styles.textDisplay}>Place phone on the NFC tag</p>
         <InfoBox content="Successfully programmed! (Only show up on success)" />
-        <Button
-          title="Go to failure screen"
-          onPress={() => {this.props.navigation.navigate('Fail', {
-            failMessage: 'Something went wrong programming the tag...'
-          })}}
-        />
-
-      </View>
-      <View style = {{}}>
-
-      <Image
-        source = {require('./../app/img/placeOnNfcImage.png')}
+      </div>
+      <img
+        src = {require('../assets/img/placeOnNfcImage.png')}
         style = {{width: '50%', height: '50%', alignSelf: 'center', marginTop: '10%'}}
-
        />
-       </View>
-      </View>
+      </div>
     )
   }
 }
-const styles = StyleSheet.create({
+const styles = {
   container: {
     backgroundColor: '#3d93bc',
     height: '100%'
@@ -55,4 +43,4 @@ const styles = StyleSheet.create({
     marginTop: 120,
     borderStyle: 'solid'
   }
-})
+};

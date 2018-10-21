@@ -1,31 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
 import Form from '../components/Form.js';
 
 export default class EnterWifiScreen extends React.Component {
   render() {
     return (
-      <View style = {styles.container}>
-      <View style={styles.box}>
-        <Text style = {styles.textDisplay}>Enter your wifi credentials:</Text>
-        <Form />
-        <Button
-          title="Submit"
-          color="#3D93BC"
-          onPress={() => {this.props.navigation.navigate('Program')}}
-        />
-        <Button
-          title="Go to failure screen"
-          onPress={() => {this.props.navigation.navigate('Fail', {
-            failMessage: 'Something went wrong with your credentials...'
-          })}}
-        />
-        </View>
-      </View>
+      <div style={styles.container}>
+        <div style={styles.box}>
+          <p style={styles.textDisplay}>Enter your wifi credentials:</p>
+          <Form />
+        </div>
+      </div>
     )
   }
 }
-const styles = StyleSheet.create({
+
+const styles = {
   container: {
     backgroundColor: '#3d93bc',
     height: '100%'
@@ -52,4 +41,4 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     minHeight: 200
   }
-})
+};
