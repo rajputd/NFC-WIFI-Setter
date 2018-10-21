@@ -5,11 +5,28 @@ import HomeScreen from '../screens/HomeScreen.js';
 import ProgramTagScreen from '../screens/ProgramTagScreen.js';
 import './../css/app.css';
 
- class App extends Component{
+
+ class App extends Component {
+   constructor(props) {
+     super(props);
+     this.state = {
+       currentScreen: 'Home',
+       screenParams: {},
+       nfcAvailable: false
+     }
+   }
+
   render() {
+    const currentScreen = this.state.currentScreen;
+    const params = this.state.screenParams;
+
     return (
-      //<FailureScreen failMessage = 'Something went wrong' />
-      <ProgramTagScreen/>
+      <div>
+        {currentScreen === "Home" ? <HomeScreen /> :
+         currentScreen === "Fail" ? <FailureScreen {...params} /> :
+         currentScreen === "Wifi" ? <EnterWifiScreen {...params} /> :
+         currentScreen === "Prog" ? <ProgramTagScreen {...params} /> : null}
+      </div>
     );
   }
 }
