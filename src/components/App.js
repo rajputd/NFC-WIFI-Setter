@@ -3,15 +3,13 @@ import EnterWifiScreen from '../screens/EnterWifiScreen.js';
 import FailureScreen from '../screens/FailureScreen.js';
 import HomeScreen from '../screens/HomeScreen.js';
 import ProgramTagScreen from '../screens/ProgramTagScreen.js';
-//import { NFC } from 'nfc-pcsc';
 
-//const nfc = new NFC();
 
  class App extends Component {
    constructor(props) {
      super(props);
      this.state = {
-       currentScreen: 'Prog',
+       currentScreen: 'Home',
        screenParams: {},
        nfcAvailable: false
      }
