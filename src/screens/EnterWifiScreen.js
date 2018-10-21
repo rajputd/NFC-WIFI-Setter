@@ -6,8 +6,10 @@ export default class EnterWifiScreen extends React.Component {
     return (
       <div style={styles.container}>
         <div style={styles.box}>
-          <p style={styles.textDisplay}>Enter your wifi credentials:</p>
+          <p style={styles.textDisplay}>Enter your WIFI credentials:</p>
           <Form />
+          <button style={styles.button}>Submit
+          </button>
         </div>
       </div>
     )
@@ -17,28 +19,36 @@ export default class EnterWifiScreen extends React.Component {
 const styles = {
   container: {
     backgroundColor: '#3d93bc',
-    height: '100%'
+    width: '100vw',
+    height: '100vh',
+    margin: 0
   },
   box:{
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 100,
-    minHeight: 500,
-    borderBottomRightRadius: 15,
-    borderBottomLeftRadius: 15,
-    borderTopRightRadius: 15,
-    borderTopLeftRadius: 15,
     borderStyle:'solid',
     backgroundColor: 'white',
+    borderRadius: '25px',
     borderColor:'black',
-    borderWidth: 4
+    borderWidth: 4,
+    position: 'absolute',
+    top: '10%',
+    left: '10%',
+    width: '80%',
+    margin: 'auto',
+    paddingBottom: '40px',
+    paddingLeft: '10px'
   },
   textDisplay: {
     fontSize: 50,
     textAlign: 'center',
-    color: 'black',
-    marginTop: 80,
-    borderStyle: 'solid',
-    minHeight: 200
+    color: 'black'
+  },
+  button: {
+    borderStyle:'solid',
+    backgroundColor: '#b2b5b6',
+    borderRadius: '25px',
+    borderColor:'black',
+    borderWidth: 2,
+    padding: '8px',
+    marginTop: '25px'
   }
 };

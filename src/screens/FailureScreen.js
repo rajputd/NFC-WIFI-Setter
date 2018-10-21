@@ -16,27 +16,25 @@ export default class FailureScreen extends React.Component {
 const styles = {
   container: {
     backgroundColor: '#e36947',
-    height: '100%'
+    width: '100vw',
+    height: '100vh',
+    margin: 0
   },
   box:{
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 100,
-    minHeight: 350,
-    borderBottomRightRadius: 15,
-    borderBottomLeftRadius: 15,
-    borderTopRightRadius: 15,
-    borderTopLeftRadius: 15,
     borderStyle:'solid',
     backgroundColor: 'white',
+    borderRadius: '25px',
     borderColor:'black',
-    borderWidth: 4
+    borderWidth: 4,
+    position: 'absolute',
+    top: '10%',
+    left: '10%',
+    width: '80%',
+    margin: 'auto'
   },
   textDisplay: {
     fontSize: 50,
     textAlign: 'center',
     color: 'black',
-    marginTop: 80,
-    borderStyle: 'solid'
   },
 };
