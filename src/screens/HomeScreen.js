@@ -7,7 +7,7 @@ export default class HomeScreen extends React.Component {
       <div style={styles.container}>
         <div style={styles.box}>
           <p style ={styles.textDisplay}>IS NFC ON? </p>
-          <button onClick={this.props.onClick}>Next</button>
+          <button style={styles.button} onClick={this.props.onClick}>Next</button>
         </div>
       </div>
     )
@@ -32,15 +32,21 @@ const styles = {
     borderRadius: '25px',
     borderColor:'black',
     borderWidth: 4,
-    // position: 'relative',
-    // top: '150px',
-    // left: '80px',
-    // right: '200px',
     position: 'absolute',
     top: '10%',
     left: '10%',
     width: '80%',
     margin: 'auto',
+  },
+  button: {
+    borderStyle:'solid',
+    backgroundColor: '#b2b5b6',
+    borderRadius: '25px',
+    borderColor:'black',
+    borderWidth: 2,
+    padding: '8px',
+    marginLeft: 20,
+    marginBottom: 10
 
   }
 };
